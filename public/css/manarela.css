@@ -1,0 +1,16 @@
+i.fa { font-size: 24px; }
+input.nomor-halaman { width: 80px; text-align: center;}
+.epl_igt,.etg_igt { display: inline-block; width: 150px;}
+.epl_kr{
+    background-color: #eeeeee; color: #555555; padding: 10px; 
+    margin: 5px; display: inline-block;
+}
+
+.card-top {
+    background-image: url('../img/banner.png');
+    background-size: 100% 100%;
+}
+.card-top > h3 , 
+.card-top > h5 , 
+.card-top > div > div > h3
+{ text-shadow: 3px 1px 2px black; color: white; font-weight: bold;}
