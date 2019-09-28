@@ -55,7 +55,7 @@ class Model_penugasan
     public function mbeberPenugasan($hal = 1){
         $row = ($hal - 1) * slarik;
         //$sql = "SELECT * FROM {$this->table} ORDER BY namaTugas LIMIT $row , " . slarik;
-        $sql = "SELECT namaTugas,lokasiTugas,skope,DATE_FORMAT(tanggalMulai,'%d-%m-%Y') AS tanggalMulai,DATE_FORMAT(tanggalSelesai,'%d-%m-%Y') AS tanggalSelesai FROM penugasan GROUP BY namaTugas ORDER BY tanggalMulai LIMIT $row , " . slarik;
+        $sql = "SELECT idxPenugasan,namaTugas,lokasiTugas,skope,DATE_FORMAT(tanggalMulai,'%d-%m-%Y') AS tanggalMulai,DATE_FORMAT(tanggalSelesai,'%d-%m-%Y') AS tanggalSelesai FROM penugasan GROUP BY namaTugas ORDER BY tanggalMulai LIMIT $row , " . slarik;
         
         $this->db->query($sql);
         $this->db->execute();
@@ -63,11 +63,11 @@ class Model_penugasan
     }
 
     // select One
-    public function ndelokPenugasan($data){
+    public function ndelokPenugasan($idx){
         $sql = "SELECT * FROM {$this->table} WHERE idxPenugasan = :idx ";
         
         $this->db->query($sql);
-        $this->db->bind('idx' , $data['indexPenugasan']);
+        $this->db->bind('idx' , $idx);
         $this->db->execute();
         return $this->db->resultOne();
     }
@@ -78,6 +78,16 @@ class Model_penugasan
         $this->db->query($sql);
         $this->db->bind('korel' , $kodeRelawan);
         $this->db->execute();
+        return $this->db->resultSet();
+    }
+
+    public function relawanBertugas($idt){
+        $sql = "SELECT penugasan.kodeRelawan , relawan.namaLengkap , relawan.jenisKelamin , relawan.angkatan FROM penugasan , relawan WHERE namaTugas = ( SELECT namaTugas FROM penugasan WHERE idxPenugasan=:idt ) && relawan.kodeRelawan = penugasan.kodeRelawan ";
+
+        $this->db->query($sql);
+        $this->db->bind('idt',$idt);
+        $this->db->execute();
+
         return $this->db->resultSet();
     }
 

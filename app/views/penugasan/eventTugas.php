@@ -89,7 +89,11 @@
           <tbody>
             <?php foreach($data['tugas'] AS $tugas):?>
             <tr>
-              <td><?=$tugas['namaTugas'];?></td>
+              <td>
+                <a href="<?=BASEURL;?>/Penugasan/berangkat/<?=$tugas['idxPenugasan'];?>">
+                <?=$tugas['namaTugas'];?>
+                </a>
+              </td>
               <td><?=$tugas['lokasiTugas'];?></td>
               <td><?=$tugas['skope'];?></td>
               <td style="text-align:center; width: 240px;"><?=$tugas['tanggalMulai'] . ' - ' . $tugas['tanggalSelesai'];?></td>

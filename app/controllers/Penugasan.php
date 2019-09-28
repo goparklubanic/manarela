@@ -67,4 +67,15 @@ class Penugasan extends Controller
       }
     }
   }
+
+  public function berangkat($idt){
+    $data['penugasan'] = $this->model('Model_penugasan')->ndelokPenugasan($idt);
+    $data['peserta'] = $this->model('Model_penugasan')->relawanBertugas($idt);
+    $data['title'] = "Relawan Bertugas";
+
+    $this->view('template/header',$data);
+    $this->view('template/navbar');
+    $this->view('penugasan/peserta',$data);
+    $this->view('template/footer');
+  }
 }
