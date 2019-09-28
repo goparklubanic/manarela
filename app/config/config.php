@@ -3,7 +3,7 @@
   // DEFINE ('BASEURL','http://likgopar.mugeno.org/manarela/public');
 
   // INET BASEURL
-  DEFINE ('BASEURL','http://relawan.klubaners.web.id/public');
+  DEFINE ('BASEURL','http://relawan.klubaners.web.id/');
 
   DEFINE ('dbhost', 'localhost');         // hostname of db
   DEFINE ('dbname', "klubaner_manarela"); // db name
