@@ -88,7 +88,7 @@
           <tbody>
             <?php foreach($data['diklat'] AS $diklat):?>
             <tr>
-              <td><?=$diklat['namaPelatihan'];?></td>
+              <td><a href="<?=BASEURL;?>/Pelatihan/peserta/<?=$diklat['idxPelatihan'];?>"><?=$diklat['namaPelatihan'];?></a></td>
               <td><?=$diklat['jenjang'];?></td>
               <td style="text-align:center; width: 240px;"><?=$diklat['tanggalMulai'] . ' - ' . $diklat['tanggalSelesai'];?></td>
               <td style="text-align:right; width: 160px;"><?=$diklat['jamKurikulum'];?>&nbsp; Jam</td>

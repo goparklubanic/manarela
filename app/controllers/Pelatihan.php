@@ -61,4 +61,15 @@ class Pelatihan extends Controller
     }
   }
 
+  public function peserta($id){
+    $data['pelatihan'] = $this->model("Model_pelatihan")->ndelokPelatihan($id);
+    $data['title'] = "Peserta Diklat";
+    $data['peserta'] = $this->model("Model_pelatihan")->pesertaPelatihan($id);
+
+    $this->view('template/header',$data);
+    $this->view('template/navbar');
+    $this->view('pelatihan/peserta',$data);
+    $this->view('template/footer');
+  }
+
 }
