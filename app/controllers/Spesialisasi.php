@@ -2,6 +2,14 @@
 
 class Spesialisasi extends Controller
 {
+  
+  public function __construct(){
+    if(!isset($_SESSION['user']) && $_SESSION['user'] !== 'admin' ){
+      
+      header("Location:".BASEURL."/Admin");
+    }
+  }
+  
   // method default
   public function index()
   {
