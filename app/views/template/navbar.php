@@ -24,10 +24,14 @@
     </ul>
       
     <ul class="navbar-nav mr-0">
+      <li class="nav-link">
+        <span class="text-light"><?=$_SESSION['user'];?></span>
+      </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="<?=BASEURL;?>/Admin/signout">
           <i class="fa fa-user"> </i>
         </a>
+        
       </li>
     </ul>
   <div>

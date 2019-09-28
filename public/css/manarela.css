@@ -14,3 +14,19 @@ input.nomor-halaman { width: 80px; text-align: center;}
 .card-top > h5 , 
 .card-top > div > div > h3
 { text-shadow: 3px 1px 2px black; color: white; font-weight: bold;}
+
+#login-wrapper{
+    width: 400px; height: 400px; position: absolute;
+    top: 50%; margin-top:-200px; left: 50%; margin-left: -200px;
+    background: linear-gradient(#ff000063 , #fa0404e5 ),  url("../img/logo.png");
+    background-size: cover;
+    border-radius: 50%;
+}
+
+#login-wrapper > form {
+    padding: 50px; box-sizing: border-box;
+    background-color: #eeeeee8e;
+    height: 200px; width: 340px; margin: 100px auto;
+    border-radius: 15px;
+}
+
