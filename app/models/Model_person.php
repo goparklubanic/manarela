@@ -42,4 +42,21 @@ class Model_person
         return $this->db->resultSet();
     }
 
+    public function updatesaya($data){
+        
+        $sql = "UPDATE relawan SET namaLengkap = :namaLengkap , jenisKelamin = :jenisKelamin , email = :email , nomorTelp = :nomorTelp , pendidikanTerakhir = :pendidikanTerakhir WHERE kodeRelawan = :kodeRelawan";
+        
+        $this->db->query($sql);
+
+        $this->db->bind('namaLengkap' , $data['namaLengkap']);
+        $this->db->bind('jenisKelamin' , $data['jenisKelamin']);
+        $this->db->bind('email' , $data['email']);
+        $this->db->bind('nomorTelp' , $data['nomorTelp']);
+        $this->db->bind('pendidikanTerakhir' , $data['pendidikanTerakhir']);
+        $this->db->bind('kodeRelawan' , $data['kodeRelawan']);
+
+        $this->db->execute();
+        return $this->db->rowCount();
+    }
+
 }

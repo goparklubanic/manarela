@@ -13,4 +13,3 @@
   <script>var baseurl = "<?=BASEURL;?>"; </script>
 </head>
 <body>
-

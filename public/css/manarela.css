@@ -31,15 +31,23 @@ input.nomor-halaman { width: 80px; text-align: center;}
 }
 
 .row-maroon {
-    background-color: #da0202; color: #eeeeee;
+    background-color: #e20000; color: #eeeeee;
+    text-shadow: 2px 2px 0px #444300;
 }
 
-.row-maroon > div > table > tbody > tr {
-    background-color: #ffecec; color: #00005f;
-}
 
-.side-head { padding: 40px 0px; text-align: center;}
+
+.side-head { padding: 20px 0px; text-align: center;}
 .side-head > h2 , .side-head > h3 , .side-head > h4 {
     font-weight: bold;
     padding: 0; margin: 0;
+}
+
+.list-sm{ color: #00004b;}
+.list-sm > p {margin:0; padding:0;}
+.blue-splitter { height: 40px; background-color: whitesmoke;}
+@media screen and ( max-width: 600px ){
+    .side-head > h2 , .side-head > h3 , .side-head > h4 {
+        font-size : 18px;
+    }
 }
