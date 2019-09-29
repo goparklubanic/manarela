@@ -5,7 +5,7 @@ class Home extends Controller
   public function __construct(){
     if(!isset($_SESSION['user']) && $_SESSION['user'] !== 'admin' ){
       
-      header("Location:".BASEURL."/Admin");
+      header("Location:".BASEURL."/Person/Login");
     }
   }
   // method default
