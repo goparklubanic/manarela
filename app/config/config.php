@@ -1,9 +1,9 @@
 <?php
   // LOCAL BASE URL
-  DEFINE ('BASEURL','http://likgopar.mugeno.org/manarela/public');
+  // DEFINE ('BASEURL','http://likgopar.mugeno.org/manarela/public');
 
   // INET BASEURL
-  // DEFINE ('BASEURL','https://relawan.klubaners.web.id');
+  DEFINE ('BASEURL','https://relawan.klubaners.web.id');
 
   DEFINE ('dbhost', 'localhost');         // hostname of db
   DEFINE ('dbname', "klubaner_manarela"); // db name

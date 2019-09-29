@@ -12,6 +12,7 @@
     <div class="row">
         <div class="col-lg-2">
             <h4>Identitas Relawan</h4>
+            <a href="<?=BASEURL?>/Person/logout">Logout</a>
             <div class="list-group">
                 <?php $person = $data['person']; ?>
                 <li class="list-group-item">

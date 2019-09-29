@@ -59,4 +59,15 @@ class Model_person
         return $this->db->rowCount();
     }
 
+    public function otentikasi($data){
+        $sql = "SELECT * FROM relawan WHERE kodeRelawan = :kodeRelawan LIMIT 1";
+        
+        $this->db->query($sql);
+        $this->db->bind('kodeRelawan' , $data['kodeRelawan']);
+        $this->db->execute();
+        $hasil = $this->db->rowCount();
+        $detil = $this->db->resultOne();
+        return array('row'=>$hasil , 'set'=>$detil);
+    }
+
 }

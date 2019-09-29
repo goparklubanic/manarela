@@ -24,6 +24,6 @@ class Admin extends Controller
         session_destroy();
         session_unset();
         unset($_SESSION);
-        header("Location:".BASEURL."/Admin/");
+        header("Location:".BASEURL."/Person/login");
     }
 }
