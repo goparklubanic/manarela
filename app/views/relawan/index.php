@@ -66,10 +66,10 @@
                                 <td><?=$relawan['nomorTelp'];?></td>
                                 <td><?=$relawan['pendidikanTerakhir'];?></td>
                                 <td>
-                                    <i class="fa fa-trash-o"></i>&nbsp;
-                                    <i class="fa fa-pencil-square-o"></i>&nbsp;
-                                    <i class="fa fa-bookmark-o"></i>&nbsp;
-                                    <i class="fa fa-ambulance"></i>
+                                    <i class="fa fa-trash-o" data-toggle="tooltip" data-placement="left" title="Hapus!"></i>&nbsp;
+                                    <i class="fa fa-pencil-square-o" data-toggle="tooltip" data-placement="left" title="Edit!"></i>&nbsp;
+                                    <i class="fa fa-bookmark-o" data-toggle="tooltip" data-placement="left" title="Pelatihan"></i>&nbsp;
+                                    <i class="fa fa-ambulance" data-toggle="tooltip" data-placement="left" title="Penugasan"></i>
                                 </td>
                             </tr>
                             <?php endforeach; ?>
