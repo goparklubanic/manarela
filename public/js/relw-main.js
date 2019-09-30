@@ -1,4 +1,7 @@
 $(document).ready( function(){
+    
+    $('[data-toggle="tooltip"]').tooltip();
+
     var nomorHalaman;
     $('.pg-prev').click( function(){
         nomorHalaman = parseInt( $('#nomor-halaman').val()) - 1 ;
