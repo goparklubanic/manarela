@@ -60,10 +60,12 @@ class Model_person
     }
 
     public function otentikasi($data){
-        $sql = "SELECT * FROM relawan WHERE kodeRelawan = :kodeRelawan LIMIT 1";
+        $password = md5($data['kodeRelawan']."***".$data['password']);
+
+        $sql = "SELECT * FROM relawan WHERE katasandi = :katasandi LIMIT 1";
         
         $this->db->query($sql);
-        $this->db->bind('kodeRelawan' , $data['kodeRelawan']);
+        $this->db->bind('katasandi' , $password);
         $this->db->execute();
         $hasil = $this->db->rowCount();
         $detil = $this->db->resultOne();

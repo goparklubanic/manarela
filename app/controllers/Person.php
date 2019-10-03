@@ -38,6 +38,8 @@ class Person extends Controller
             $_SESSION['dewan'] = $data['set']['kodeRelawan'];
             //$this->dewan = $data['set']['kodeRelawan'];
             header("Location:" . BASEURL . "/Person/");
+        }else{
+            echo "Otentikasi gagal";
         }
     }
 

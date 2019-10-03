@@ -21,9 +21,9 @@
 
                 <input type="text" class="form-control" name="kodeRelawan" id="kodeRelawan" placeholder="Masukkan Kode Relawan">
             </div>
-            <!--div class="form-group">
-                <input type="password" class="form-control" name="password" id="password" placeholder="Password">
-            </div-->
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" id="password" placeholder="Password" value="591471">
+            </div>
             <div class="form-group text-center">
                 <input type="submit" class="btn btn-primary" value="Login"><br><br>
                 <a class='text-dark' href="<?=BASEURL;?>/Admin/">Admin</a>
@@ -36,7 +36,5 @@
 </body>
 </html>
 <!--
-markas:banjarnegara
-_$_
-adminpmi:relawanpmi
+password is 591471
 -->
